@@ -1,0 +1,44 @@
+Inti git hub
+
+git ini > memberikan informasi ke git bash/folder di vs code bahwa folder ini connect dengan repo di web github
+git remote origin add nama url (bisa copas dari web github kita) > untuk menyambungkan git bash dengan github
+git remote -v > untuk memberikan informasi kemana kita akan fetch dan push
+
+kita buat file di vs code,
+untuk megirimkan file ke git hub
+
+git add . > untuk kirim file ke github, tapi belum di simpan di repo
+git commit -m > memberikan iformasi perubahan pada git hub
+
+setelah itu baru :
+
+git push origin main > menyimpan perubahan di branch main/branch yang kita tuju
+
+jika kita/orang lain mengirimkan file ke repo branch kita,
+
+maka kita bisa mengambil filenya dengan cara
+
+git pull origin main > untuk menarik file dari repo
+
+jika melakukan perubahan di repo, jangan lupa click commit changes
+
+Git branch: adalah sebuah perintah agar bisa melihat seluruh branch yang terdapat pada repository
+
+Git checkout: sebuah perintah yang digunakan untuk menukar branch yang aktif dengan brach yang sudah dipilih.
+
+Git merge: sebuah perintah yang digunakan untuk menggabungkan branch yang aktif dan juga branch yang sudah dipilih
+
+Git clone merupakan sebuah perintah yang digunakan untuk membuat salinan repository lokal.
+
+caranya, pilih code di repo irang lain, klik lalu copy urlnya,
+
+lalu akan ketik di terminal ada
+
+git clone <url-nya>
+
+setelah itu, file akan langsung masuk di vs code,
+
+anda harus push lagi ke repo anda untuk menyimpan di git hub
+
+
+
