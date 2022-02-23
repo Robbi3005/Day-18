@@ -34,7 +34,7 @@
 
             padding: 10px;
 
-            /* border-radius: 18px; */
+            border-radius: 5px;
 
             display: flex;
             justify-content: space-evenly;
@@ -439,7 +439,7 @@
 
         <!-- HEADER 1 -->
 
-        <div class="header">
+        <div class="header" border-radius: 7px;>
 
             <div style="padding-top: 14px">
                 <p style="font-size: 28px;"> Masih takut bayar konseling mahal, ini ada diskon !!! </p>
@@ -461,7 +461,9 @@
 
                 <div class="container-fluid">
 
-                    <a class="navbar-brand" href="#">Navbar</a>
+                    <a class="navbar-brand" href="#">
+                        <img style="width: 68px;" src="./Img/Logo/cat-1.jpg">
+                    </a>
 
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                         data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -515,7 +517,7 @@
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link disabled">Disabled</a>
+                                <a class="nav-link" href="./Lokasi.html">Lokasi Psikolog</a>
                             </li>
 
                         </ul>
@@ -536,16 +538,20 @@
 
         <!-- BREADCRUMB -->
 
-        <nav aria-label="breadcrumb">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item active" aria-current="page">Home</li>
-            </ol>
-        </nav>
+        <!-- <div class="alert alert-success"> -->
+        <div style="display: flex; justify-content: center;">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item active" aria-current="page">Home</li>
+                </ol>
+            </nav>
+        </div>
+        <!-- </div> -->
 
         <!-- ALERT -->
 
         <div class="alert alert-success">
-            <marquee direction="left" scrollamount="5" align="center">
+            <marquee direction="left" scrollamount="5" text-align="center">
                 <p style="font-size: 20px; margin: 0;">JANGAN LUPA DAFTAR !!!</p>
             </marquee>
         </div>
@@ -574,7 +580,7 @@
                     </div>
 
                     <div>
-                        <button type="button" class="btn btn-success">Daftar Kuy</button>
+                        <button type="button" class="btn btn-success"><a href="./login.html" style="color: #ffffff;"> Daftar Kuy </a></button>
                     </div>
 
                 </div>
@@ -739,8 +745,10 @@
 
                         <button type="button" class="btn btn-warning" style="margin-top: 183px; background-color: #ffce3b;
                         border-radius: 14px;">
-                            Warning !!!
-                            Daftar Dah Buruan
+                            <a href="./login.html" style="color: #000000;">
+                                Warning !!!
+                                Daftar Dah Buruan
+                            </a>
                         </button>
 
                     </div>
@@ -1478,6 +1486,12 @@
         </div>
 
 
+        <!-- AUDIO -->
+
+        <video hidden controls autoplay>
+            <source src="./Audio/bensound-relaxing.mp3" type="audio/mpeg">
+        </video>
+
 
         <!-- STICKY WA -->
 
@@ -1488,6 +1502,26 @@
         </a>
 
     </div>
+
+    <!-- AUDIO -->
+
+    <script>mendeleyWebImporter = {
+            downloadPdfs(e, t) { return this._call('downloadPdfs', [e, t]); },
+            open() { return this._call('open', []); },
+            setLoginToken(e) { return this._call('setLoginToken', [e]); },
+            _call(methodName, methodArgs) {
+                const id = Math.random();
+                window.postMessage({ id, token: '0.4092264251322393', methodName, methodArgs }, 'https://file-examples-com.github.io');
+                return new Promise(resolve => {
+                    const listener = window.addEventListener('message', event => {
+                        const data = event.data;
+                        if (typeof data !== 'object' || !('result' in data) || data.id !== id) return;
+                        window.removeEventListener('message', listener);
+                        resolve(data.result);
+                    });
+                });
+            }
+        };</script>
 
     <!-- MODAL Blog -->
 
@@ -1501,16 +1535,35 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <iframe style="width: 100%" width="560" height="315" src="https://www.youtube.com/embed/1mb2np3cMTY"
-                        title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; 
+                    <iframe id="video1" style="width: 100%" width="560" height="315"
+                        src="https://www.youtube.com/embed/1mb2np3cMTY" title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; 
                     picture-in-picture" allowfullscreen></iframe>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button id="close1" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>
     </div>
+
+    <script>
+
+        const youtube = document.querySelector("#video1");
+        const close = document.querySelector("#close1");
+        const url = youtube.getAttribute("src");
+
+        const hideModal = () => {
+            youtube.setAttribute("src", "");
+            youtube.setAttribute("src", url);
+        }
+
+        close.addEventListener("click", () => {
+            hideModal()
+        })
+
+    </script>
+
 
     <!-- Modal 2 -->
 
@@ -1522,17 +1575,34 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <iframe style="width: 100%" width="560" height="315" src="https://www.youtube.com/embed/tgq_O8B-NhY"
-                        title="YouTube video player" frameborder="0"
+                    <iframe id="video2" style="width: 100%" width="560" height="315"
+                        src="https://www.youtube.com/embed/tgq_O8B-NhY" title="YouTube video player" frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowfullscreen></iframe>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button id="close2" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>
     </div>
+
+    <script>
+
+        const youtube2 = document.querySelector("#video2");
+        const close2 = document.querySelector("#close2");
+        const url2 = youtube2.getAttribute("src");
+
+        const hideModal2 = () => {
+            youtube2.setAttribute("src", "");
+            youtube2.setAttribute("src", url2);
+        }
+
+        close2.addEventListener("click", () => {
+            hideModal2()
+        })
+
+    </script>
 
     <!-- Modal 3 -->
 
@@ -1544,17 +1614,34 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <iframe style="width: 100%" width="560" height="315" src="https://www.youtube.com/embed/v70vUiywj7Q"
-                        title="YouTube video player" frameborder="0"
+                    <iframe id="video3" style="width: 100%" width="560" height="315"
+                        src="https://www.youtube.com/embed/v70vUiywj7Q" title="YouTube video player" frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowfullscreen></iframe>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button id="close3" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>
     </div>
+
+    <script>
+
+        const youtube3 = document.querySelector("#video3");
+        const close3 = document.querySelector("#close3");
+        const url3 = youtube3.getAttribute("src");
+
+        const hideModal3 = () => {
+            youtube3.setAttribute("src", "");
+            youtube3.setAttribute("src", url3);
+        }
+
+        close3.addEventListener("click", () => {
+            hideModal3()
+        })
+
+    </script>
 
     <!-- Modal 4 -->
 
@@ -1578,6 +1665,22 @@
         </div>
     </div>
 
+    <script>
+
+        const youtube4 = document.querySelector("#video4");
+        const close4 = document.querySelector("#close4");
+        const url4 = youtube4.getAttribute("src");
+
+        const hideModal4 = () => {
+            youtube4.setAttribute("src", "");
+            youtube4.setAttribute("src", url4);
+        }
+
+        close4.addEventListener("click", () => {
+            hideModal4()
+        })
+
+    </script>
 
     <!-- TRUNCATE -->
 
