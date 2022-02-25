@@ -15,6 +15,31 @@
     <link href="https://fonts.googleapis.com/css2?family=Changa&display=swap" rel="stylesheet">
 
     <style>
+        .body {
+
+            position: relative;
+            /* height: 100vh; */
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            z-index: 0;
+        }
+
+        .body::before {
+            content: "";
+            background-image: url("./Background/pexels-3.jpg");
+            background-size: cover;
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            bottom: 0px;
+            left: 0px;
+            opacity: 0.47;
+
+        }
+
         .container-fluid {
             /* background: #cecbcb; */
             color: #333333;
@@ -24,6 +49,8 @@
             text-align: center;
 
             margin-top: 10px;
+
+            z-index: 100;
         }
 
         .header {
@@ -55,7 +82,7 @@
 
 </head>
 
-<body>
+<body class="body">
 
     <div class="container-fluid">
 
@@ -89,7 +116,7 @@
                 <div class="container-fluid">
 
                     <a class="navbar-brand" href="_blank">
-                        <img style="width: 68px;" src="./Img/Logo/cat-1.jpg">
+                        <img style="width: 68px;" src="./Img/Logo/cat-3.png">
                     </a>
 
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -108,39 +135,6 @@
 
                             <li class="nav-item">
                                 <a class="nav-link" href="./about.html">About</a>
-                            </li>
-
-                            <li class="nav-item dropdown">
-
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                    data-bs-toggle="dropdown" aria-expanded="false">
-                                    Layanan Kami
-                                </a>
-
-                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <li><a class="dropdown-item" href="#layanankami">Mentoring</a></li>
-                                    <li><a class="dropdown-item" href="#layanankami">webinar</a></li>
-                                    <li><a class="dropdown-item" href="#layanankami">Konseling</a></li>
-                                    <li><a class="dropdown-item" href="#layanankami">Tes Psikologi</a></li>
-                                    <li><a class="dropdown-item" href="#layanankami">Kelas Online</a></li>
-                                    <li>
-                                        <hr class="dropdown-divider">
-                                    </li>
-                                    <li><a class="dropdown-item" href="#">Premium</a></li>
-                                </ul>
-
-                            </li>
-
-                            <li class="nav-item">
-                                <a class="nav-link" href="#testimoni">Testimoni</a>
-                            </li>
-
-                            <li class="nav-item">
-                                <a class="nav-link" href="#blog">Blog</a>
-                            </li>
-
-                            <li class="nav-item">
-                                <a class="nav-link" href="#feedback">Feedback</a>
                             </li>
 
                             <li class="nav-item">

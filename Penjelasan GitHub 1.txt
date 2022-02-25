@@ -1,7 +1,7 @@
 Inti git hub
 
 git ini > memberikan informasi ke git bash/folder di vs code bahwa folder ini connect dengan repo di web github
-git remote origin add nama url (bisa copas dari web github kita) > untuk menyambungkan git bash dengan github
+git remote add origin nama url (bisa copas dari web github kita) > untuk menyambungkan git bash dengan github
 git remote -v > untuk memberikan informasi kemana kita akan fetch dan push
 
 kita buat file di vs code,
@@ -40,5 +40,6 @@ setelah itu, file akan langsung masuk di vs code,
 
 anda harus push lagi ke repo anda untuk menyimpan di git hub
 
+git remote rm origin > untuk mengganti remote
 
 

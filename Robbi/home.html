@@ -14,6 +14,43 @@
 
     <!-- BODY -->
 
+    <style>
+        .body {
+
+            position: relative;
+            /* height: 100vh; */
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            z-index: 0;
+
+            /* background: linear-gradient(135deg, #d5f0ee, #fdc9c6);
+            background-size: contain; */
+
+            /* background-image: url("./Background/5590822.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed; */
+        }
+
+        .body::before {
+            content: "";
+            background-image: url("./Background/pexels-3.jpg");
+            background-size: contain;
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            bottom: 0px;
+            left: 0px;
+            opacity: 0.47;
+
+        }
+    </style>
+
+
     <!-- HEADER -->
 
     <style>
@@ -26,6 +63,8 @@
             text-align: center;
 
             margin-top: 10px;
+
+            z-index: 100;
         }
 
         .header {
@@ -420,7 +459,6 @@
     <!-- MEDIA QUERY -->
 
     <style>
-
         @media screen and (max-width: 576px) {
             .float {
                 background-color: #0e2c19;
@@ -442,7 +480,7 @@
 </head>
 
 
-<body>
+<body class="body">
 
     <div class="container-fluid">
 
@@ -462,7 +500,7 @@
 
         </div>
 
-        <!-- HEADER 2 -->
+<!-- HEADER 2 -->
         <!-- NAVBAR -->
 
         <div style="display: flex; justify-content: center; align-items: center;">
@@ -471,7 +509,7 @@
                 <div class="container-fluid">
 
                     <a class="navbar-brand" href="_blank">
-                        <img style="width: 68px;" src="./Img/Logo/cat-1.jpg">
+                        <img style="width: 68px;" src="./Img/Logo/cat-3.png">
                     </a>
 
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -541,7 +579,7 @@
                     Login
                 </button>
             </a>
-        </div>
+        </div>        
 
         <br>
 
@@ -589,7 +627,8 @@
                     </div>
 
                     <div>
-                        <button type="button" class="btn btn-success"><a href="./login.html" style="color: #ffffff;"> Daftar Kuy </a></button>
+                        <button type="button" class="btn btn-success"><a href="./login.html" style="color: #ffffff;">
+                                Daftar Kuy </a></button>
                     </div>
 
                 </div>
@@ -989,8 +1028,8 @@
 
                     </div>
 
-                    <button type="button" class="btn-warning" style="border-radius: 24px; z-index: 1;" data-bs-toggle="modal"
-                        data-bs-target="#testi1">
+                    <button type="button" class="btn-warning" style="border-radius: 24px; z-index: 1;"
+                        data-bs-toggle="modal" data-bs-target="#testi1">
                         Detail Foto
                     </button>
 
@@ -1014,8 +1053,8 @@
 
                     </div>
 
-                    <button type="button" class="btn-warning" style="border-radius: 24px; z-index: 1;" data-bs-toggle="modal"
-                        data-bs-target="#testi2">
+                    <button type="button" class="btn-warning" style="border-radius: 24px; z-index: 1;"
+                        data-bs-toggle="modal" data-bs-target="#testi2">
                         Detail Foto
                     </button>
 
@@ -1039,8 +1078,8 @@
 
                     </div>
 
-                    <button type="button" class="btn-warning" style="border-radius: 24px; z-index: 1;" data-bs-toggle="modal"
-                        data-bs-target="#testi3">
+                    <button type="button" class="btn-warning" style="border-radius: 24px; z-index: 1;"
+                        data-bs-toggle="modal" data-bs-target="#testi3">
                         Detail Foto
                     </button>
 
@@ -1067,8 +1106,8 @@
 
                     </div>
 
-                    <button type="button" class="btn-warning" style="border-radius: 24px; z-index: 1;" data-bs-toggle="modal"
-                        data-bs-target="#testi4">
+                    <button type="button" class="btn-warning" style="border-radius: 24px; z-index: 1;"
+                        data-bs-toggle="modal" data-bs-target="#testi4">
                         Detail Foto
                     </button>
                 </div>
@@ -1090,8 +1129,8 @@
 
                     </div>
 
-                    <button type="button" class="btn-warning" style="border-radius: 24px; z-index: 1;" data-bs-toggle="modal"
-                        data-bs-target="#testi5">
+                    <button type="button" class="btn-warning" style="border-radius: 24px; z-index: 1;"
+                        data-bs-toggle="modal" data-bs-target="#testi5">
                         Detail Foto
                     </button>
                 </div>
@@ -1114,8 +1153,8 @@
 
                     </div>
 
-                    <button type="button" class="btn-warning" style="border-radius: 24px; z-index: 1;" data-bs-toggle="modal"
-                        data-bs-target="#testi6">
+                    <button type="button" class="btn-warning" style="border-radius: 24px; z-index: 1;"
+                        data-bs-toggle="modal" data-bs-target="#testi6">
                         Detail Foto
                     </button>
                 </div>
