@@ -3,7 +3,7 @@ dont-push.html
 # video  > jika ingin mengignore semua file di dalam folder video
 
 # ini untuk mengignore file index.js
-video/index.js 
+# video/index.js 
 
 #  ini untuk meng-ignore semua file berbentuk js
 video/*.js
